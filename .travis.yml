@@ -1,5 +1,6 @@
-language: generic
 sudo: required
+language: generic
+
 services:
   - docker
 
@@ -14,7 +15,6 @@ after-success:
   - docker build -t mrtaan/multi-nginx ./nginx
   - docker build -t mrtaan/multi-server ./server
   - docker build -t mrtaan/multi-worker ./worker
-
   # Login to the Docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # Take those images and push them to docker hub
