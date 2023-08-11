@@ -25,10 +25,6 @@ after-success:
 
 deploy:
   provider: elasticbeanstalk
-  access_key_id:
-    secure: $AWS_ACCESS_KEY
-  secret_access_key:
-    secure: $AWS_SECRET_KEY
   region: "ap-southeast-1"
   app: "complex"
   env: "Complex-env"
@@ -36,3 +32,5 @@ deploy:
   bucket_path: 'complex'
   on:
     branch: main
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
