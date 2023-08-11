@@ -33,3 +33,6 @@ deploy:
   app: "complex"
   env: "Complex-env"
   bucket_name: "elasticbeanstalk-ap-southeast-1-068145616535"
+  bucket_path: 'complex'
+  on:
+    branch: main
